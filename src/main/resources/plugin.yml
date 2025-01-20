@@ -1,5 +1,5 @@
 name: TestPlugin
-version: '0.0.1-ALPHA'
+version: '0.0.2-ALPHA'
 main: me.aciner.testPlugin.TestPlugin
 api-version: '1.21'
 load: STARTUP
