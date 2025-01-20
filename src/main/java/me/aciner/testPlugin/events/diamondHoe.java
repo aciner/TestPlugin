@@ -18,7 +18,7 @@ public class diamondHoe implements Listener {
     private static HashMap<UUID, Integer> Ammo = new HashMap<>();
 
     @EventHandler
-    public static void onRightClick(PlayerInteractEvent e) {
+    public void onRightClick(PlayerInteractEvent e) {
 
         if (e.hasItem()) {
             if (!e.getItem().getType().equals(Material.DIAMOND_HOE)) {

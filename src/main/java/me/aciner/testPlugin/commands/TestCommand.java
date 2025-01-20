@@ -28,5 +28,6 @@ public class TestCommand extends BaseCommand {
         BossBar bossBar = Bukkit.createBossBar(/* title 1st arg */ ChatColor.DARK_PURPLE + "hi", BarColor.BLUE, BarStyle.SEGMENTED_6);
         bossBar.addPlayer(player);
         player.launchProjectile(Egg.class, player.getLocation().getDirection());
+
     }
 }

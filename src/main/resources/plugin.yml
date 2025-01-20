@@ -1,7 +1,7 @@
 name: TestPlugin
-version: '0.0.2-ALPHA'
+version: '0.0.3'
 main: me.aciner.testPlugin.TestPlugin
 api-version: '1.21'
 load: STARTUP
 authors: [ aciner ]
-website: aciner.net
+website: https://github.com/aciner/TestPlugin
