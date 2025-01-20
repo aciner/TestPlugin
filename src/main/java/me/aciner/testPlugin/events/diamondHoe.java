@@ -24,7 +24,7 @@ public class diamondHoe implements Listener {
             if (!e.getItem().getType().equals(Material.DIAMOND_HOE)) {
                 return;
             }
-            if (!e.getAction().equals(Action.RIGHT_CLICK_AIR) || (!e.getAction().equals(Action.RIGHT_CLICK_BLOCK))) {
+            if (!e.getAction().equals(Action.RIGHT_CLICK_AIR) && (!e.getAction().equals(Action.RIGHT_CLICK_BLOCK))) {
                 return;
             }
 
