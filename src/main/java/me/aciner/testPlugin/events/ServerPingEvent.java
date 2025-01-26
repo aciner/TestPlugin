@@ -15,7 +15,7 @@ public class ServerPingEvent implements Listener {
     @EventHandler
     public void onServerPing(ServerListPingEvent e) {
         e.setMaxPlayers(100);
-        e.setMotd(ChatColor.RED + "TEST SERVER" + ChatColor.BLUE + "[1.21]\n" + ChatColor.GREEN + "Join up for epic test server" );
+        e.setMotd(ChatColor.RED + "TEST SERVER " + ChatColor.BLUE + "[1.21]\n" + ChatColor.GREEN + "Join up for epic test server" );
         try {
             e.setServerIcon(Bukkit.loadServerIcon(new File("icon.png")));
         } catch (Exception ex) {
@@ -24,5 +24,6 @@ public class ServerPingEvent implements Listener {
                 ServerPinged = true;
             }
         }
+
     }
 }

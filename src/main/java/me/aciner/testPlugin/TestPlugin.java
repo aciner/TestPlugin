@@ -1,10 +1,8 @@
 package me.aciner.testPlugin;
 
 import co.aikar.commands.PaperCommandManager;
-import me.aciner.testPlugin.commands.BowBuddyCommand;
-import me.aciner.testPlugin.commands.PrivateMessageCommand;
-import me.aciner.testPlugin.commands.ReplyCommand;
-import me.aciner.testPlugin.commands.TestCommand;
+import me.aciner.testPlugin.commands.*;
+import me.aciner.testPlugin.events.HelpGUIListener;
 import me.aciner.testPlugin.events.ServerPingEvent;
 import me.aciner.testPlugin.events.bowBuddy;
 import me.aciner.testPlugin.events.diamondHoe;
@@ -27,12 +25,16 @@ public final class TestPlugin extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new diamondHoe(), this);
         Bukkit.getPluginManager().registerEvents(new bowBuddy(), this);
         Bukkit.getPluginManager().registerEvents(new ServerPingEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new HelpGUIListener(this), this);
 
         PaperCommandManager manager = new PaperCommandManager(this);
         manager.registerCommand(new TestCommand());
         manager.registerCommand(new BowBuddyCommand());
         manager.registerCommand(new PrivateMessageCommand(this));
         manager.registerCommand(new ReplyCommand(this));
+        manager.registerCommand(new HelpGUICommand(this));
+        //advancedapi
+
 
         recentMessanger = new HashMap<>();
     }
